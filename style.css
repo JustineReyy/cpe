@@ -250,6 +250,15 @@ left: 0;
     transform: rotate(65deg);
 }
 
+.click {
+    position: absolute;
+    z-index: 35;
+    height: 250px;
+    top: 1870px;
+    left: 1050px;
+    transform: rotate(15deg);
+}
+
 
 .container {
     z-index: 33;
