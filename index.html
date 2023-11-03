@@ -1,286 +1,153 @@
-body {
-    margin: 0;
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Parallax Website</title>
   
-}
+</head>
+<body>
 
-.parallax{
-    pointer-events: none;
-    
- 
-}
+   <main>
+    <div class="exp">EXPLORE</div>
+    <img src="asset\asset_0001_1-rocket.png" class="parallax rocket">
+    <img src="asset\asset_0002_2-land1.png" class="parallax land1">
+    <img src="asset\asset_0003_3-rock.png" class="parallax rock">
+    <img src="asset\asset_0004_4-dome2.png" class="parallax dome2">
+    <img src="asset\asset_0005_5-dome1.png" class="parallax dome1">
+    <img src="asset\asset_0006_6-land-2.png" class="parallax land-2">
+    <img src="asset\asset_0007_7-moon.png" class="parallax moon">
+    <img src="asset\asset_0008_8-star.png" class="parallax star-8">
+    <img src="asset\asset_0009_9-star.png" class="parallax star-9">
+    <img src="asset\asset_0011_11-orbit.png" class="parallax orbit">
+    <img src="asset\asset_0012_12-fog.png" class="parallax fog">
+    <img src="asset\asset_0013_13-back.png" class="back">
 
-main {
-position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  overflow-y: scroll;
-top: 0;
-left: 0;
-  transform-style: preserve-3d;
-  perspective: 10px;
- 
-}
-
-.back {
-    position: absolute;
-    width: 1920px;
-    z-index: 1;
-}
-
-.fog {
-    position: absolute;
-    width: 1520px;
-    top: 390px;
+    <img src="asset\a1.png" class="a1">
+    <img src="asset\a2.png" class="a2">
+    <img src="asset\a3.png" class="a3">
+    <img src="asset\a4.png" class="a4">
+    <img src="asset\click.svg" class="click">
    
-      
-    z-index: 3;
-}
-
-.orbit {
-    position: absolute;
-    width: 1250px;
-    top: 100px;
-    left: 125px;
-      
-    z-index: 4;
-}
-
-.star-9 {
-    position: absolute;
-    width: 800px;
-    top:30px;
-
-      
-    z-index: 5;
-}
-
-.star-8 {
-    position: absolute;
-    width: 1500px;
-    top: 50px;
-  
-      
-    z-index: 6;
-}
-
-.moon {
-    position: absolute;
-    width: 500px;
-    top: -1800px;
-    left: -1800px;
-      
-    z-index: 7;
-    transform: translateZ(-55px) scale(2);
-}
-
-.land-2 {
-    position: absolute;
-    width: 1900px;
-    top: 450px;
-    left: -195px;
-    z-index: 8;
-    transform: translateZ(-2.5px) scale(1);
-}
-
-.dome1 {
-    position: absolute;
-    width: 900px;
-    top: 650px;
-    left: 650px;
-      
-    z-index: 9;
-    transform: translateZ(-2.1px) scale(1);
-}
-
-.dome2 {
-    position: absolute;
-    width: 180px;
-    top: 720px;
-    left: 1475px;
-      
-    z-index: 10;
-    transform: translateZ(-1.8px) scale(1);
-}
-
-.rock {
-    position: absolute;
-    width: 650px;
-    top: 785px;
-    left: 1000px;
-    z-index: 11;
-    transform: translateZ(-1.5px) scale(1);
-}
-
-.land1 {
-    position: absolute;
-    width: 1920px;
-    top: 700px;
-    left: -80px;
-    z-index: 12;
-    transform: translateZ(-1px) scale(1);
+        <div class="container">
+            <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="planet">
+                            Jupiter
+                        </div>
+                        <a href="#jupiterModal" data-toggle="modal">
+                            <img src="planet\jupiter.png" class="jupiter">
+                        </a>
+                    </div>
     
-}
-
-.rocket {
-    position: absolute;
-    width: 200px;
-    top: 450px;
-    left: 350px;  
-    z-index: 13;
+                    <div class="item">
+                        <div class="planet">
+                            Mars
+                        </div>
+                        <a href="#marsModal" data-toggle="modal">
+                            <img src="planet\mars.png" class="mars">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <div class="planet">
+                            Saturn
+                        </div>
+                        <a href="#saturnModal" data-toggle="modal">
+                            <img src="planet\saturn.png" class="saturn">
+                        </a>
+                    </div>
+                </div>
+                <!-- Carousel nav -->
+                <a class="left carousel-control" href="#carousel" data-slide="prev">&lsaquo;</a>
+                <a class="right carousel-control" href="#carousel" data-slide="next">&rsaquo;</a>
+            </div>
+        </div>
     
+       </main>
+    
+       <!-- Modal for Jupiter -->
+       <div class="modal fade" id="jupiterModal" tabindex="-1" role="dialog" aria-labelledby="jupiterModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <h4 class="modal-title" id="jupiterModalLabel">Jupiter</h4>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                       </button>
+                   </div>
+                   <div class="modal-body">
+                    Jupiter is the largest planet in our solar system, known for its immense size and striking banded appearance. It is a gas giant composed mostly of hydrogen and helium and has a strong magnetic field. Jupiter has a prominent feature called the Great Red Spot, a massive storm that has been observed for centuries. It has numerous moons, including the four largest, known as the Galilean moons (Io, Europa, Ganymede, and Callisto), which are of particular interest to scientists for their diverse characteristics. Jupiter's immense gravity also plays a crucial role in influencing the dynamics of the solar system.
+                   </div>
+               </div>
+           </div>
+       </div>
+    
+       <!-- Modal for Mars -->
+       <div class="modal fade" id="marsModal" tabindex="-1" role="dialog" aria-labelledby="marsModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <h4 class="modal-title" id="marsModalLabel">Mars</h4>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                       </button>
+                   </div>
+                   <div class="modal-body">
+                    Mars is the fourth planet from the Sun in our solar system and is often referred to as the "Red Planet" due to its reddish appearance. It is a terrestrial planet with a thin atmosphere, known for its striking surface features, including vast deserts, deep canyons, and the largest volcano in the solar system, Olympus Mons. Mars has been a focus of scientific exploration and the subject of numerous space missions, including rovers like Curiosity and Perseverance, with the goal of understanding its geology and potential for past or present life.
+                   </div>
+               </div>
+           </div>
+       </div>
+    
+       <!-- Modal for Saturn -->
+       <div class="modal fade" id="saturnModal" tabindex="-1" role="dialog" aria-labelledby="saturnModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <h4 class="modal-title" id="saturnModalLabel">Saturn</h4>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                       </button>
+                   </div>
+                   <div class="modal-body">
+                    Saturn is the sixth planet from the Sun in our solar system, easily recognized by its stunning system of rings, which are made up of countless particles of ice and rock. It is a gas giant like Jupiter but is known for its distinctive ring system, which makes it one of the most visually captivating objects in the night sky. Saturn has a unique hexagonal storm at its north pole and a variety of moons, with Titan being one of the most notable, featuring an atmosphere and liquid methane lakes. This planet has been the target of space exploration missions, including the Cassini-Huygens mission, which provided valuable insights into its complex ring system and diverse moon environments.
+                   </div>
+               </div>
+           </div>
+       </div>
+
+    
+    
+    </body>
+    </html>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    
+   </main> 
+
    
-}
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+
+ 
+</body>
 
 
-
-
-.carousel-fade {
-    .carousel-inner {
-        .item {
-            transition-property: opacity;
-        }
-        
-        .item,
-        .active.left,
-        .active.right {
-            opacity: 0;
-        }
-  
-        .active,
-        .next.left,
-        .prev.right {
-            opacity: 1;
-        }
-  
-        .next,
-        .prev,
-        .active.left,
-        .active.right {
-            left: 0;
-            transform: translate3d(0, 0, 0);
-        }
-    }
-  
-    .carousel-control {
-        z-index: 2;
-    }
-  }
-  
-  
-  
-  html, 
-  body, 
-  .carousel, 
-  .carousel-inner, 
-  .carousel-inner .item {
-    height: 100%;
     
-  }
-  
-  .item:nth-child(1) {
-    background: #74C390;
-  }
-  
-  .item:nth-child(2) {
-    background: #51BCE8;
-  }
-  
-  .item:nth-child(3) {
-    background: #E46653;
-  }
-
-.planet {
-    position: absolute;
-    top: 100px;
-    left: 300px;
-    padding: 50px;
-    font-family: "Berlin Sans FB", Arial, sans-serif;
-    font-size: 100px;
-    color: aliceblue;
-    text-shadow: 
-        2px 2px 10px rgba(0, 0, 0, .8), /* Dark shadow for depth */
-        -2px -2px 4px rgba(255, 255, 255, 0.5);
-}
-
-.carousel {
-    z-index: 30;
-    height: 500px;
-    width: 900px;
-    top: 1980px;
-    left: 120px;
-    border-radius: 30px; 
-    overflow: hidden;
-    
-}
-
-.a1 {
-    position: absolute;
-    z-index: 29;
-    height: 700px;
-    top: 1100px;
-    left: -100px;
-}
-
-.a2 {
-    position: absolute;
-    z-index: 29;
-    height: 700px;
-    top: 1400px;
-    left: 900px;
-    transform: rotate(65deg);
-}
-
-.a3 {
-    position: absolute;
-    z-index: 29;
-    height: 800px;
-    top: 1800px;
-    left: -80px;
-    
-}
-
-.a4 {
-    position: absolute;
-    z-index: 29;
-    height: 600px;
-    top: 2050px;
-    left: 900px;
-    transform: rotate(65deg);
-}
-
-.click {
-    position: absolute;
-    z-index: 35;
-    height: 250px;
-    top: 1870px;
-    left: 1050px;
-    transform: rotate(15deg);
-}
-
-
-.container {
-    z-index: 33;
-}
-
-.exp {
-    position: absolute;
-    top: 100px;
-    left: 480px;
-    padding: 0;
-    margin: 0;
-    z-index: 33;
-    font-family: "Berlin Sans FB", Arial, sans-serif;
-    font-size: 150px;
-    color: aliceblue;
-    text-shadow: 
-        2px 2px 8px rgba(0, 0, 0, 0.5), /* Dark shadow for depth */
-        -2px -2px 4px rgba(255, 255, 255, 0.5);
-    transform: translateZ(-5px) scale(1);
-}
-
-.modal-body {
-    text-align: justify; 
-    line-height:2; 
-}
+</html>
